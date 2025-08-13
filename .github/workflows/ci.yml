@@ -18,5 +18,13 @@ jobs:
         with:
           node-version: 22
 
-      - name: Force Failure
-        run: node --version
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 10
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Running Tests
+        run: pnpm test
