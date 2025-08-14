@@ -41,7 +41,7 @@ jobs:
         run: npm ci
 
       - name: Check formating
-        run: npm run lint
+        run: npm run lint -- --max-warnings=0
 
       - name: Check Styling
         run: npm run format:check
