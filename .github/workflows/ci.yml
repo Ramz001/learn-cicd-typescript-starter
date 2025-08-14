@@ -36,9 +36,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          
+
       - name: Install dependencies
         run: npm ci
+
+      - name: Check formating
+        run: npm run lint
 
       - name: Check Styling
         run: npm run format:check
